@@ -65,21 +65,29 @@ The dataset used for training and testing the model is available. To request acc
 Dataset Format:
 plaintext
 Copy code
+
+
 └── Agrifier 
+
     ├── maize
+
     │   ├── healthy
     │   └── unhealthy
     │       ├── blight
     │       ├── common_rust
     │       └── gray_leaf_spot
+
     ├── sugarcane
+
     │   ├── healthy
     │   └── unhealthy
     │       ├── mosaic
     │       ├── redrot
     │       ├── rust
     │       └── yellow
+
     ├── paddy
+
     │   ├── healthy
     │   └── unhealthy
     │       ├── bacterial_blight
@@ -88,6 +96,7 @@ Copy code
     │       ├── hispa
     │       ├── leaf_blast
     │       └── tungro
+
     └── wheat
         ├── healthy
         └── unhealthy

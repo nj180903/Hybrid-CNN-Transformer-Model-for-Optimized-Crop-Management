@@ -3,6 +3,9 @@
 ## Overview
 This project presents a hybrid deep learning model combining Convolutional Neural Networks (CNN) and Transformer architectures to optimize crop management. The model assists in the agricultural sector by performing automated crop recognition, evaluating crop health, and predicting specific disease types. The hybrid model utilizes the spatial processing strengths of CNNs and the sequence modeling capabilities of Transformers for precise and efficient crop management.
 
+## Live Demo
+You can interact with the model and try out crop recognition, health status evaluation, and disease type prediction in real-time through the following link: https://farmerassistant.streamlit.app/ .
+
 ## Table of Contents
 - [Main Contributions](#main-contributions)
 - [System Overview](#system-overview)
@@ -123,8 +126,6 @@ Copy code
 pip install streamlit
 This will run both the frontend and backend from the same file (croptest.py), providing a seamless user experience.
 
-Live Demo
-You can interact with the model and try out crop recognition, health status evaluation, and disease type prediction in real-time through the following link: https://farmerassistant.streamlit.app/ .
 
 Demo Features:
 Upload Crop Images: Upload crop images and get instant predictions.

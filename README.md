@@ -16,6 +16,7 @@ This project presents a hybrid deep learning model combining Convolutional Neura
 - [Contributing](#contributing)
 - [License](#license)
 - [Authors](#authors)
+
 ## Main Contributions
 The key contributions of this project include:
 1. **Hybrid CNN-Transformer Model**: A novel approach that combines CNN and Transformer models for agricultural applications, improving crop management processes.
@@ -42,73 +43,104 @@ The **Streamlit** frontend is integrated directly into the main file of this pro
 1. **Install the necessary dependencies** for the project:
    ```bash
    pip install -r requirements.txt
-   ```
-   Ensure that Streamlit is installed:
-   ```bash
-   pip install streamlit
-   ```
+Ensure that Streamlit is installed:
 
-2. **Run the application**:
-   ```bash
-   streamlit run croptest.py
-   ```
-   This will launch the application, and you can access it in your browser at `http://localhost:8501`.
+bash
+Copy code
+pip install streamlit
+Run the application:
+bash
+Copy code
+streamlit run croptest.py
+This will launch the application, and you can access it in your browser at http://localhost:8501.
+In the main.py file, you will find both the Streamlit interface and the backend model integration. The frontend allows users to:
 
-In the **main.py** file, you will find both the Streamlit interface and the backend model integration. The frontend allows users to:
-- Upload images of crops for recognition, health evaluation, and disease prediction.
-- View the crop’s health status and predicted disease type.
-
+Upload images of crops for recognition, health evaluation, and disease prediction.
+View the crop’s health status and predicted disease type.
 The backend model is used directly within the same file to process the uploaded crop images and return results.
 
-## Dataset
-  The dataset used for training and testing the model is available. To request access, please contact the authors at **nj180903@gmail.com**.
+Dataset
+The dataset used for training and testing the model is available. To request access, please contact the authors at nj180903@gmail.com.
 
-## Installation
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/username/Hybrid-CNN-Transformer-Model-for-Optimized-Crop-Management.git
-   cd Hybrid-CNN-Transformer-Model-for-Optimized-Crop-Management
-   ```
+Dataset Format:
+plaintext
+Copy code
+└── Agrifier 
+    ├── maize
+    │   ├── healthy
+    │   └── unhealthy
+    │       ├── blight
+    │       ├── common_rust
+    │       └── gray_leaf_spot
+    ├── sugarcane
+    │   ├── healthy
+    │   └── unhealthy
+    │       ├── mosaic
+    │       ├── redrot
+    │       ├── rust
+    │       └── yellow
+    ├── paddy
+    │   ├── healthy
+    │   └── unhealthy
+    │       ├── bacterial_blight
+    │       ├── blast
+    │       ├── brown_spot
+    │       ├── hispa
+    │       ├── leaf_blast
+    │       └── tungro
+    └── wheat
+        ├── healthy
+        └── unhealthy
+            ├── septoria
+            └── stripe_rust
+Installation
+Clone this repository:
 
-2. Install required dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+bash
+Copy code
+git clone https://github.com/username/Hybrid-CNN-Transformer-Model-for-Optimized-Crop-Management.git
+cd Hybrid-CNN-Transformer-Model-for-Optimized-Crop-Management
+Install required dependencies:
 
-3. Download the dataset and organize it within the project directory as required.
+bash
+Copy code
+pip install -r requirements.txt
+Download the dataset and organize it within the project directory as required.
 
+Frontend Setup
+Install necessary dependencies for Streamlit if not already installed:
+bash
+Copy code
+pip install streamlit
+This will run both the frontend and backend from the same file (croptest.py), providing a seamless user experience.
 
+Live Demo
+You can interact with the model and try out crop recognition, health status evaluation, and disease type prediction in real-time through the following link: https://farmerassistant.streamlit.app/ .
 
-### Frontend Setup
-1. Install necessary dependencies for Streamlit if not already installed:
-   ```bash
-   pip install streamlit
-   ```
-This will run both the frontend and backend from the same file (`croptest.py`), providing a seamless user experience.
+Demo Features:
+Upload Crop Images: Upload crop images and get instant predictions.
+Health Status and Disease Prediction: Get results for crop health (healthy/diseased/stressed) and disease type.
 
-## Results and Performance
-The hybrid model demonstrates high accuracy in all three stages—crop recognition, health evaluation, and disease prediction. 
+Results and Performance
+The hybrid model demonstrates high accuracy in all three stages—crop recognition, health evaluation, and disease prediction.
 
-Stage 1: Crop Type Classification – The model achieves an impressive validation accuracy of 98.33%, highlighting its high reliability in differentiating between crops (Maize, Paddy, Sugarcane, and Wheat). For most crops, the precision, recall, and F1 scores are close to or at 1.00, indicating exceptional performance. The model shows particular strength in classifying Maize and Sugarcane accurately, with perfect scores across all metrics, underscoring its accuracy in recognizing these crops. Paddy and Wheat also perform well, with only slight variation in recall and precision, showcasing overall model robustness.
+Stage 1: Crop Type Classification – The model achieves an impressive validation accuracy of 98.33%, highlighting its high reliability in differentiating between crops (Maize, Paddy, Sugarcane, and Wheat). For most crops, the precision, recall, and F1 scores are close to or at 1.00, indicating exceptional performance. The model shows particular strength in classifying Maize and Sugarcane accurately, with perfect scores across all metrics, underscoring its accuracy in recognizing these crops.
 
 Stage 2: Health Status Detection – Achieving a validation accuracy of 93.30%, the model demonstrates effective performance in distinguishing Healthy from Unhealthy crops. The model performs especially well for the Unhealthy class, with precision and recall around 0.95–0.97, indicating high sensitivity to identifying crop health issues. Healthy crops also show strong results, with an F1 score of 0.83, affirming the model's consistent capability in assessing crop health status accurately.
 
-Stage 3: Disease Detection – With a validation accuracy of 83.80%, the model effectively identifies specific crop diseases, showing consistent scores in precision, recall, and F1 (approximately 0.84–0.85). The weighted average metrics across disease categories also remain high, confirming balanced and stable performance. This stage’s performance underscores the model’s nuanced capability in distinguishing between multiple disease types, a more complex task given the specificity required.
+Stage 3: Disease Detection – With a validation accuracy of 83.80%, the model effectively identifies specific crop diseases, showing consistent scores in precision, recall, and F1 (approximately 0.84–0.85). The weighted average metrics across disease categories also remain high, confirming balanced and stable performance.
 
-
-## Contributing
+Contributing
 Contributions are welcome! Please follow these steps:
-1. Fork this repository.
-2. Create a new branch for your feature or bug fix.
-3. Submit a pull request with a description of your changes.
+Fork this repository.
+Create a new branch for your feature or bug fix.
+Submit a pull request with a description of your changes.
 
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+License
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
-## Authors
-
+Authors
 Primary Authors:
- [Niharika Jain] - Email: [nj180903@gmail,com],
- [Kritika Giri] - Email: [kritikagiri03@gmail.com],
- [Isha Karn] - Email: [ikarn02@gmail,com]
-
+[Niharika Jain] - Email: [nj180903@gmail.com]
+[Kritika Giri] - Email: [kritikagiri03@gmail.com]
+[Isha Karn] - Email: [ikarn02@gmail.com]

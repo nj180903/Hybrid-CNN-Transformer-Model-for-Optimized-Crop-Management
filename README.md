@@ -1,0 +1,1 @@
+# Hybrid-CNN-Transformer-Model-for-Optimized-Crop-Management
